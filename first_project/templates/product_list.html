@@ -1,0 +1,21 @@
+{% load static %}
+<div>
+    <h1>list products</h1>
+   
+    {% for i in products %}
+    
+    <p>Name: {{i.name}}</p>
+    <p>Description: {{i.description}}</p>
+    <p>Price :Rs {{i.price}}</p>
+    <img src="{% static 'shoes.jpg' %}">
+    <a href="add_to_cart/{{i.name}}">Add to Cart</a>
+    <hr>
+    {% endfor %}
+   
+
+   
+</div>
+
+
+   
+</div>

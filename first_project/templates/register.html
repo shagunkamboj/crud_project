@@ -1,0 +1,8 @@
+<h1> registration form </h1>
+<div class = "container">
+<form  method="post">
+    {% csrf_token %}
+
+    {{form}}
+    <input type="submit" class = "btn btn-primary" value="Submit" onclick="window.alert('Successfully Crreated')">
+</form>

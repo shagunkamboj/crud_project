@@ -1,0 +1,24 @@
+{% load static %}
+<div>
+    <h1>Add to cart</h1>
+{{name}}
+    <hr>
+    {% for p in data %}
+    <p>Id : {{p.id}}</p>
+    <p>Description: {{p.product_name}}</p>
+    <p>Price :Rs {{p.price}}</p>
+    <img src="{% url 'shoes.jpg'%}" width="200" height="200"/>
+    
+    <form>
+        {% csrf_token %} 
+        <button type="submit"  value="addition">+</button>
+       
+        <input type="number" name="quantity" value="{{ p.product_qty}}">
+        <button type="submit"  value="subtraction">-</button>
+        </form>
+    <hr>
+    {% endfor %}
+   
+
+   
+</div>

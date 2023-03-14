@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+    <title> this is index page </title>
+
+</head>
+<body>
+    <h1> crud operations </h1>
+    <a href =  "{% url 'stinsert'%}"> <b> ADD RECORD</b> </a>
+    <table BORDER = "1" >
+        <tr>
+            <th> student id </th>
+            <th> student name </th>
+            <th> student email </th>
+            <th> student address </th>
+            <th> student mobile </th>
+            <th> student gender </th>
+        </tr>
+        {% for i in crud_student %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.mobile_no}}</td>
+            <td>{{i.gender}}</td>
+            <td> <a href = "/edit/{{i.id}}"> EDIT </a></td>
+            <td> <a href = "/delete/{{i.id}}"> DELETE </a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

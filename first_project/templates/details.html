@@ -1,0 +1,13 @@
+<div>
+    <h2>list of product </h2>
+    {% for i in prod %}
+    {{details}}
+       <h1><b>{{i.name}}</b></h1>
+       <p>{{i.price}}</p>
+       <p>{{i.quantity}}</p><br>
+       
+       <a href = 'first_project/<int:id>/'>add to cart </a>
+       <br>   
+       <hr> 
+    {% endfor %}
+</div>

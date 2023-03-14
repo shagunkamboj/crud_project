@@ -1,0 +1,46 @@
+<!doctype html>
+<head>
+    <title> this is index page </title>
+
+</head>
+<body>
+    <h1> ADD  RECORDS </h1>
+    <HR/>
+    <form method = "POST">
+        {% csrf_token %}
+    <table border = "1">
+        <tr>
+            <td> student name </td>
+            <td><input type = "text" placeholder = "student name" name = "name"></td>
+        </tr>
+        <tr>
+            <td> student email </td>
+            <td><input type = "text" placeholder = "student email" name = "email"></td>
+        </tr>
+        <tr>
+            <td> student address </td>
+            <td><input type = "text" placeholder = "student address" name = "address"></td>
+        </tr>
+        <tr>
+            <td> student mobile_no </td>
+            <td><input type = "text" placeholder = "student mobile_no" name = "mobile_no"></td>
+        </tr>
+        <tr>
+            <td>
+            
+            <input type = "radio" value = "M" placeholder = "male" name = "gender">male
+            <input type = "radio" value = "F" placeholder = "female" name = "gender">female  
+            </td>
+        </tr>
+    </table>
+
+    <input type = "submit" value = "insert_record">
+    {% if messages %}
+    {% for result in messages %}
+    <b>{{result}}</b>
+    {% endfor %}
+    {% endif %}
+</form>
+   
+</body>
+</html>
